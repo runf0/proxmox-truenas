@@ -535,7 +535,7 @@ sub response {
 sub set_target {
     my ( $self, $iqn ) = @_;
 
-    if ( $iqn =~ /^(iqn\.\d{4}-\d{2}\.[^:]+):(.+)$/ ) {
+    if ( $iqn =~ /^(iqn\..+[^:]+):(.+)$/ ) {
         my $prefix = $1;
         my $suffix = $2;
         my $target = ( split /:/, $suffix )[-1];
